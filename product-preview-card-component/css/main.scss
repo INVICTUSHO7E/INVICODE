@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+$bg-cream: hsl(30, 38%, 92%);
+$bt-darkcyan: hsl(158, 36%, 37%);
+$tt-Dark-grayish-blue: hsl(228, 12%, 48%);
+$hd-Very-dark-blue: hsl(212, 21%, 14%);
+$txtbg-White: hsl(0, 0%, 100%);
+
+// MEDIA QUERY
+$bp-mobile: 375px;
+
+* {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-cream;
+  height: 100vh;
+
+  @media only screen and (max-width: 375px) {
+   
+
+  }
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  border-radius: 10px;
+  width: 40rem;
+ 
+
+  // mobile screen
+
+  @media only screen and (max-width: 375px) {
+    flex-direction: column;
+    margin: 3rem 2rem 3rem 2rem ;
+    border-radius: 10px 10px 10px 10px;
+    width: 50rem;
+   
+  }
+}
+.img-perfume {
+  width: 50%;
+  border-radius: 10px 0 0 10px;
+
+  @media only screen and (max-width: $bp-mobile) {
+    display: none;
+  }
+}
+
+//mobile
+
+.mobile-perfume-image {
+  display: none;
+
+  @media only screen and (max-width: $bp-mobile) {
+    border-radius: 10px 10px 0 0 ;
+    display: block;
+    width: 100%;
+    
+  }
+}
+
+.text-container {
+  padding: 3rem 3rem 3rem 3rem;
+
+  @media only screen and (max-width: 375px) {
+
+    background-color: hsl(0, 0%, 100%);
+    padding: 3rem 3rem 3rem 3rem;
+    margin-bottom: 5px;
+  }
+}
+.title {
+  color: $tt-Dark-grayish-blue;
+  padding-bottom: 1rem;
+}
+.text-heading-container {
+  padding-bottom: 1rem;
+}
+.text-heading {
+  color: $hd-Very-dark-blue;
+  font: Montserrat;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+.text-content {
+  color: $tt-Dark-grayish-blue;
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+  font: Fraunces;
+  font-weight: 500;
+}
+
+.price-text {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding-bottom: 2rem;
+
+  h1 {
+    color: $bt-darkcyan;
+    font: Fraunces;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  h5 {
+    color: $tt-Dark-grayish-blue;
+    font: Fraunces;
+    text-decoration: line-through;
+  }
+}
+
+.cart {
+  .cart-image {
+    padding-right: 1rem;
+  }
+
+  .cart-button {
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 3rem 0.8rem 3rem;
+    background-color: $bt-darkcyan;
+    color: $txtbg-White;
+  }
+  & :hover {
+    cursor: pointer;
+    background-color: hsl(157, 56%, 19%);
+  }
+}
